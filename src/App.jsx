@@ -1,15 +1,16 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { Fragment } from 'react'
 import './App.css'
-import SearchWeatherPage from "./assets/components/SearchWeatherPage.jsx"
+import HomePage from "./assets/components/HomePage.jsx"
 
 function App() {
  
 
   return (
     <Fragment>
-     <SearchWeatherPage />
+     <HomePage />
     </Fragment>
   )
 }
 
-export default App
+export {App}
