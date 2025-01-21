@@ -1,5 +1,4 @@
-import GeneralReactBootstrapCard from "./HomePage.jsx"
-import GeneralReactBootstrapButton from "./HomePage.jsx"
+import { GeneralReactBootstrapCard, GeneralReactBootstrapButton} from "../../App.jsx";
  
  
 function HeaderAndFooterExample() {

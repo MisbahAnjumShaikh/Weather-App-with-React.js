@@ -1,23 +1,38 @@
-import GeneralReactBootstrapCard from "./HomePage.jsx"
-import GeneralReactBootstrapButton from "./HomePage.jsx"
-import "./GetWeatherCard.css"
+import {
+  GeneralReactBootstrapCard,
+  GeneralReactBootstrapButton,
+} from "../../App.jsx";
+import { useRef} from "react";
+
+import "./GetWeatherCard.css";
 
 function GetWeatherCard() {
+    const searchInputRef = useRef(null);
+    const getWeather = () => {
+        // let userCity  = searchInputRef.current.value;
+
+    }
+
   return (
     <section className="getWeatherCard">
-    <GeneralReactBootstrapCard style={{ width: '18rem' }}>
-    <GeneralReactBootstrapCard.Img variant="top" src="holder.js/100px180" />
-    <GeneralReactBootstrapCard.Body>
-      <GeneralReactBootstrapCard.Title>Card Title</GeneralReactBootstrapCard.Title>
-      <GeneralReactBootstrapCard.Text>
-      get weather card
-      </GeneralReactBootstrapCard.Text>
-      <GeneralReactBootstrapButton variant="primary">Go somewhere</GeneralReactBootstrapButton>
-    </GeneralReactBootstrapCard.Body>
-  </GeneralReactBootstrapCard>
+      <GeneralReactBootstrapCard
+        style={{ width: "50%" }}
+        className="text-center mx-auto d-block"
+      >
+        <GeneralReactBootstrapCard.Body>
+          <GeneralReactBootstrapCard.Title>
+            <label htmlFor="searchInput">Enter your City Name </label>
+            <br/> <br/>
+            <input id="searchInput" ref={searchInputRef}/>
+          </GeneralReactBootstrapCard.Title>
 
+          <GeneralReactBootstrapButton variant="primary" className="mt-3" onClick={() => {getWeather}}>
+            Get Weather
+          </GeneralReactBootstrapButton>
+        </GeneralReactBootstrapCard.Body>
+      </GeneralReactBootstrapCard>
     </section>
-  )
+  );
 }
 
-export default GetWeatherCard
+export default GetWeatherCard;
