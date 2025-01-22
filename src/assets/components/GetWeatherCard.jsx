@@ -2,15 +2,18 @@ import {
   GeneralReactBootstrapCard,
   GeneralReactBootstrapButton,
 } from "../../App.jsx";
-import { useRef} from "react";
+import { useRef, useState } from "react";
+import axios from "axios";
 
 import "./GetWeatherCard.css";
 
 function GetWeatherCard() {
     const searchInputRef = useRef(null);
+    const [] = useState()
     const getWeather = () => {
-        // let userCity  = searchInputRef.current.value;
+        let userCity  = searchInputRef.current.value;
 
+        let response = axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${userCity}&appid=3a18af733ab203c7b6019bb1c799f4e0&units=metric`)
     }
 
   return (
