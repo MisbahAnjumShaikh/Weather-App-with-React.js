@@ -1,22 +1,16 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Fragment } from 'react'
 import './App.css'
-import GetWeatherCard from "./assets/components/GetWeatherCard"
-import {Card as GeneralReactBootstrapCard} from 'react-bootstrap';
-import {Button  as GeneralReactBootstrapButton} from 'react-bootstrap';
-
+import WeatherCard from "./assets/components/Weather";
+ 
 function App() {
  
 
   return (
     <Fragment>
-    <section className="main">
-    <h1 className='text-center welcomeHeading'>Welcome to Weather App</h1>
-    <GetWeatherCard />
-    </section>
-   
+    <WeatherCard />
     </Fragment>
   )
 }
 
-export{ App, GeneralReactBootstrapCard,  GeneralReactBootstrapButton}
+export default App
